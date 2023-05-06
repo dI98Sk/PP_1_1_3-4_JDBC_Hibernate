@@ -7,9 +7,13 @@ import java.sql.SQLException;
 
 public class Util {
     // реализуйте настройку соеденения с БД
+    public static final String dbName = "mydbtest";
+    public static final String dbTableName = "users";
     private static final String DB_URL = "jdbc:mysql://localhost:3306/mydbtest";
     private static final String DB_USERNAME = "root";
     private static final  String DB_PASSWORD = "Fors0897danna";
+
+    public static Connection connectionJDBC = getConnection();
 
     public static Connection getConnection(){
         Connection connection = null;
